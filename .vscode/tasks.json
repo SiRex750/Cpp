@@ -5,52 +5,29 @@
     "tasks": [
 
         {
-
-            "label": "compile",
-
-            "type": "shell",
-
-            "command": "g++",
-
-            "args": [
-
-                "-std=c++17",
-
-                "-o",
-
-                "${fileBasenameNoExtension}",
-
-                "${file}"
-
-            ],
-
-            "group": {
-
-                "kind": "build",
-
-                "isDefault": false
-
-            }
-
-        },
-
-        {
-
-            "label": "compile and run",
-
-            "type": "shell",
-
-            "command": "g++ -std=c++17 -o ${fileBasenameNoExtension} ${file} && ./${fileBasenameNoExtension} < input.txt > output.txt",
-
-            "group": {
-
-                "kind": "build",
-
-                "isDefault": true
-
-            }
-
-        }, 
+    "label": "compile",
+    "type": "shell",
+    "command": "g++",
+    "args": [
+        "-std=c++17",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}",
+        "${file}"
+    ],
+    "group": {
+        "kind": "build",
+        "isDefault": false
+    }
+},
+{
+    "label": "compile and run",
+    "type": "shell",
+    "command": "g++ -std=c++17 -o ${fileDirname}/${fileBasenameNoExtension} ${file} && ${fileDirname}/${fileBasenameNoExtension} < ${fileDirname}/input.txt > ${fileDirname}/output.txt",
+    "group": {
+        "kind": "build",
+        "isDefault": true
+    }
+}, 
 
         {
             "label": "Git Pull",

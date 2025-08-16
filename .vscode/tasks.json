@@ -22,7 +22,7 @@
 {
     "label": "compile and run",
     "type": "shell",
-    "command": "g++ -std=c++17 -o ${fileDirname}/${fileBasenameNoExtension} ${file} && ${fileDirname}/${fileBasenameNoExtension} < ${fileDirname}/input.txt > ${fileDirname}/output.txt",
+    "command": "g++ -std=c++17 -o ${fileDirname}/${fileBasenameNoExtension} ${file} && ${fileDirname}/${fileBasenameNoExtension} < ${workspaceFolder}/input.txt > ${workspaceFolder}/output.txt",
     "group": {
         "kind": "build",
         "isDefault": true

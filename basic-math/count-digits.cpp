@@ -7,7 +7,7 @@ int main() {
     /*
     while(N > 0){
         N = N/10;
-        digits++;
+        digits++; 
     }
     */
     digits = (int)(log10(N) + 1);

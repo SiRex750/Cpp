@@ -10,5 +10,6 @@ int main() {
         revNum = (revNum * 10) + ld;
         N = N/10;
     }
+    cout << revNum;
     return 0;
 }

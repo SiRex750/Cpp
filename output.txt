@@ -1,5 +1,2 @@
-2
-2
-2
-0
-1
+Lowest frequency: 1
+Highest frequency: 2
